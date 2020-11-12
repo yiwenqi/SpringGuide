@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="addr" class="cn.gsdx.domain.Address" >
+		<property name="address" value="北京"></property>
+	</bean>
+	<bean id="stu" class="cn.gsdx.domain.Student">
+		<property name="name" value="张三"></property>
+		<property name="address" ref="addr"></property>
+		<property name="books">
+			<array>
+				<value>傲慢与偏见</value>
+				<value>百年孤独</value>
+				<value>人性的弱点</value>
+			</array>
+		</property>
+		<property name="hobbies">
+			<list>
+				<value>羽毛球</value>
+				<value>篮球</value>
+				<value>兵乓球</value>
+			</list>
+		</property>
+	</bean>
+</beans>
